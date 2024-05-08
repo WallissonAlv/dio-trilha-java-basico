@@ -1,5 +1,8 @@
-public class App {
+public class TiposVariaveis {
     public static void main(String[] args) throws Exception {
+
+        String meuNome = "Wallisson Alves";
+
         double salarioMedio = 2500;
     
         short numeroCurto = 1;
@@ -10,6 +13,8 @@ public class App {
 
         numero = 10;
 
-        System.out.printl(numero);
+        System.out.println(numero);
+
+        final double VALOR_DE_PI = 3.14;
     }
 }
