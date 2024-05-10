@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ExemploForArray",
+            "request": "launch",
+            "mainClass": "ExemploForArray",
+            "projectName": "dio-trilha-java-basico_a4d0fe2a"
+        },
+        {
+            "type": "java",
+            "name": "ExemploDoWhile",
+            "request": "launch",
+            "mainClass": "ExemploDoWhile",
+            "projectName": "dio-trilha-java-basico_a4d0fe2a"
+        },
+        {
+            "type": "java",
+            "name": "ExemploBreakContinue",
+            "request": "launch",
+            "mainClass": "ExemploBreakContinue",
+            "projectName": "dio-trilha-java-basico_a4d0fe2a"
+        },
+        {
+            "type": "java",
+            "name": "Exemploforarray",
+            "request": "launch",
+            "mainClass": "Exemploforarray",
+            "projectName": "dio-trilha-java-basico_a4d0fe2a"
+        },
+        {
+            "type": "java",
+            "name": "Exemplofor",
+            "request": "launch",
+            "mainClass": "Exemplofor",
+            "projectName": "dio-trilha-java-basico_a4d0fe2a"
+        },
+        {
+            "type": "java",
             "name": "ContaTerminal",
             "request": "launch",
             "mainClass": "ContaTerminal",
