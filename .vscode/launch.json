@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ProcessoSeletivo",
+            "request": "launch",
+            "mainClass": "ProcessoSeletivo",
+            "projectName": "dio-trilha-java-basico_a4d0fe2a"
+        },
+        {
+            "type": "java",
             "name": "FormatadorCepExemplo",
             "request": "launch",
             "mainClass": "FormatadorCepExemplo",
