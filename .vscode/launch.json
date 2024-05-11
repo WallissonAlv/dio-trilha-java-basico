@@ -6,27 +6,46 @@
     "configurations": [
         {
             "type": "java",
+<<<<<<< HEAD
             "name": "ExemploForArray",
             "request": "launch",
             "mainClass": "ExemploForArray",
+=======
+            "name": "ProcessoSeletivo",
+            "request": "launch",
+            "mainClass": "ProcessoSeletivo",
+>>>>>>> 40d728f6b5692a51e8eac7323a864a76df3091e1
             "projectName": "dio-trilha-java-basico_a4d0fe2a"
         },
         {
             "type": "java",
+<<<<<<< HEAD
             "name": "ExemploDoWhile",
             "request": "launch",
             "mainClass": "ExemploDoWhile",
+=======
+            "name": "FormatadorCepExemplo",
+            "request": "launch",
+            "mainClass": "FormatadorCepExemplo",
+>>>>>>> 40d728f6b5692a51e8eac7323a864a76df3091e1
             "projectName": "dio-trilha-java-basico_a4d0fe2a"
         },
         {
             "type": "java",
+<<<<<<< HEAD
             "name": "ExemploBreakContinue",
             "request": "launch",
             "mainClass": "ExemploBreakContinue",
+=======
+            "name": "ResultadoEscolar",
+            "request": "launch",
+            "mainClass": "ResultadoEscolar",
+>>>>>>> 40d728f6b5692a51e8eac7323a864a76df3091e1
             "projectName": "dio-trilha-java-basico_a4d0fe2a"
         },
         {
             "type": "java",
+<<<<<<< HEAD
             "name": "Exemploforarray",
             "request": "launch",
             "mainClass": "Exemploforarray",
@@ -37,6 +56,11 @@
             "name": "Exemplofor",
             "request": "launch",
             "mainClass": "Exemplofor",
+=======
+            "name": "CaixaEletronico",
+            "request": "launch",
+            "mainClass": "CaixaEletronico",
+>>>>>>> 40d728f6b5692a51e8eac7323a864a76df3091e1
             "projectName": "dio-trilha-java-basico_a4d0fe2a"
         },
         {

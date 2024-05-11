@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class ContaTerminal {
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
+        Scanner Teclado = new Scanner(System.in).useLocale(Locale.US);
 
         int numero;
         String agencia;
@@ -12,19 +12,19 @@ public class ContaTerminal {
         double saldo;
 
         System.out.print("Olá, por favor digite o nome completo: ");
-        nomeCliente = scanner.nextLine();
+        nomeCliente = Teclado.nextLine();
 
         System.out.println("Digite o número da conta: ");
-        numero = scanner.nextInt();
+        numero = Teclado.nextInt();
 
         System.out.println("Digite a agência da conta: ");
-        agencia = scanner.next();
+        agencia = Teclado.next();
 
         /*  Não entendi muito bem o que eu deveria fazer com esta etapa, portanto pedi para que o usuario
             digitasse o seu saldo disponível */
 
         System.out.println("Digite o saldo disponível");
-        saldo = scanner.nextDouble();
+        saldo = Teclado.nextDouble();
 
         System.out.println("Olá "+nomeCliente+", obrigado por criar uma conta em nosso banco, sua Agência é "+agencia+", conta "+numero+", seu saldo disponível para saque é este R$"+saldo);
     }
