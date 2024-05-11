@@ -5,8 +5,9 @@ public class FormatadorCepExemplo {
             System.out.println(cepFormatado);
 
         } catch (CepInvalidoException e) {
-            // TODO Auto-generated catch block
-            System.out.println("O CEP está inválido");;
+
+            System.out.println("O CEP está inválido");
+            
         }
 
     }
