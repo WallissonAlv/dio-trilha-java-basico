@@ -1,0 +1,7 @@
+package equipamentos;
+
+import equipamentos.copiadora.Copiadora;
+
+public class Xerox extends Copiadora{
+
+}
