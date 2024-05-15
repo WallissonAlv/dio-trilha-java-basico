@@ -1,0 +1,22 @@
+/*
+ * Simulação do uso da classe MSNMessenger
+ */
+public class ComputadorPedrinho {
+	public static void main(String[] args) {
+		//abrindo MSN Messenger
+		MSNMessenger msn = new MSNMessenger();
+		msn.enviarMensagem();
+		msn.receberMensagem();
+		System.out.println();
+		
+		FacebookMessenger face = new FacebookMessenger();
+		face.enviarMensagem();
+		face.receberMensagem();
+		System.out.println();
+		
+		Telegram tel = new Telegram();
+		tel.enviarMensagem();
+		tel.receberMensagem();
+		System.out.println();
+	}
+}
