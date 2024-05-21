@@ -28,10 +28,10 @@ public class CadastroProdutos {
 	public static void main(String[] args) {
 		CadastroProdutos cp = new CadastroProdutos();
 		
-		cp.adicionarProduto(1l, "Produto 5", 10 , 5);
-		cp.adicionarProduto(2l, "Produto 6", 20, 10);
-		cp.adicionarProduto(5l, "Produto 7", 30, 2);
 		cp.adicionarProduto(9l, "Produto 9", 40, 3);
+		cp.adicionarProduto(1l, "Produto 5", 10 , 5);
+		cp.adicionarProduto(5l, "Produto 7", 30, 2);
+		cp.adicionarProduto(2l, "Produto 6", 20, 10);
 		
 		//System.out.println(cp.produtoSet);
 		
