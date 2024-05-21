@@ -24,9 +24,6 @@ public class Contato {
 	public void setNumero(float numero) {
 		this.numero = numero;
 	}
-
-	
-	
 	
 	@Override
 	public int hashCode() {
