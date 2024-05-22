@@ -25,17 +25,14 @@ public class ContagemPalavras {
 			System.out.println(palavraMap);
 		} 
 	}
-	/*public Palavra encontrarPalavraMaisFrequente() {
-		Palavra palavraMaisFrequente = null;
-		int palavraMaisRepetida = 0;
-		if(!palavraMap.isEmpty()) {
-			for(Palavra p : palavraMap.values()) {
-				if(p.getContagem() > palavraMaisRepetida) {
-					palavraMaisFrequente = p;
-				}
-			}
+	
+	/*	AQUI NÃO PROSSEGUI PORQUE A PROFESSORA NÃO ENSINOU COMO FAZER !
+	 * public String encontrarPalavraMaisFrequente() {
+		String palavraMaisUsada = null;
+		int maisUsada = 0;
+		for(Map.Entry<String, Integer> entry : palavraMap()) {
 		}
-		return palavraMaisFrequente;
+		return null;
 	}*/
 	
 	// AREA PARA TESTE
