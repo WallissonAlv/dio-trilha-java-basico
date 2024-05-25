@@ -3,9 +3,11 @@ package Desafios;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.OptionalDouble;
 import java.util.stream.Collectors;
+import java.util.stream.LongStream;
 
 public class Desafios {
 	public static void main(String[] args) {
@@ -80,38 +82,55 @@ public class Desafios {
 		}else {
 			System.out.println("DESAFIO 09: A lista não tem números repetidos");
 		}
-	}
-	
+		
 	// DESAFIO 10 - AGRUPE OS VALORES ÍMPARES MULTIPLOS DE 3 OU 5
+	Map<Integer, List<Integer>> multiplos = numeros.stream()
+			.filter(n -> n % 2 != 0)
+			.filter(n -> n % 3 == 0 || n % 5 == 0) 
+			.collect(Collectors.groupingBy(n -> {
+				if(n % 3 == 0) return 3;
+				else return 5;
+			}));
+	System.out.println("DESAFIO 10: Valores ímpares multiplos de 3 e 5: "+multiplos);
 	
+	// DESAFIO 11 - ENCONTRE A SOMA DOS QUADRADOS DE TODOS OS NÚMEROS DA LISTA
+	int somaDosQuadrados = numeros.stream()
+			.mapToInt(n -> n * n)
+			.sum();
+	System.out.println("DESAFIO 11: A soma dos quadrados é: "+somaDosQuadrados);
 	
+	// DESAFIO 12 - ENCONTRE O PRODUTO DE TODOS DA LISTA		
+	int produtoTotal = numeros.stream()
+			.reduce(1, (a , b) -> a * b);
+	System.out.println("DESAFIO 12: O produto de todos é: "+produtoTotal);		
+			
+	// DESAFIO 13 - FILTRAR OS NÚMEROS QUE ESTÃO DENTRO DE UM INTERVALO
+	int inicio = 5;
+	int fim = 10;
+	long produtoEmIntervalo = LongStream.rangeClosed(inicio, fim)
+			.reduce(1, (a,b) -> a*b);
+	System.out.println("DESAFIO 13: O produto com base no intervalo de 5 a 10: "+produtoEmIntervalo);		
+			
+	/* DESAFIO 14 - ENCONTRE O MAIOR NÚMERO PRIMO DA LISTA		
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	int maiorPrimo = numeros.stream()
+			.filter(Desafios::ePrimo)
+			.max(Integer::compareTo)
+			.orElse(0);
+
+	System.out.println("DESAFIO 14: O maior número primo na lista é: " + maiorPrimo);*/
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	}
 }
