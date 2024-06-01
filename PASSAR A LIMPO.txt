@@ -1,107 +1,62 @@
-*** TESTES DE SOFTWARE ***
-PROF° WILLYAN CAETANO
+--- Em testes de software, "mocking" é uma técnica para
+simular o comportamento de objetos reais em um 
+ambiente controlado durante os testes. Em vez de 
+usar objetos reais, você cria objetos "falsos" que 
+imitam o comportamento dos objetos reais 
+necessários para o teste.
 
- - AULA 01 - DEFINIÇÃO E CONMCEITO BÁSICO
- - AULA 02 - NÍVEIS E TÉCINICAS DE TESTES
- - AULA 03 - TESTES NÃO FUNCIONAIS
- - AULA 04 - A PIRAMIDE DE TESTES
+--- 
 
-==============================================
+@Mock
+Quando você anota um campo com @Mock, o Mockito cria
+ um mock desse tipo automaticamente. Isso significa 
+que você não precisa chamar Mockito.mock() 
+explicitamente para criar o mock. Em resumo, 
+o @Mock simplifica o processo de criação de mocks, 
+tornando o código mais limpo e legível.
 
-AULA 01 => DEFINIÇÃO E CONCEITOS BÁSICOS
+@Spy
+Quando você usa @Spy em um objeto, você está criando
+uma versão controlada dele, onde você pode definir 
+comportamentos específicos para alguns métodos, 
+enquanto outros métodos permanecem intactos, 
+executando suas implementações originais. Isso é 
+útil quando você precisa testar partes específicas 
+de um objeto real, mantendo a funcionalidade 
+original de outras partes.
 
-DEFEITO: ERRO TÉCNICO 
+@InjectMocks
+Quando você usa @InjectMocks, o Mockito tenta 
+injetar automaticamente mocks ou spies nos campos 
+anotados com @Mock ou @Spy dentro da classe sendo 
+testada. Isso significa que você não precisa 
+configurar manualmente as dependências da classe 
+sob teste; o Mockito faz isso por você.
 
-ERRO: ALGUM CAMINHO QUE O DESENVOLVEDOR ESQUECEU DE TESTA, FALHA HUMANA PERANTE AQUELE SISTEMA
-
-FALHA: TODO CENÁRIO INESPERADO, QUE O USUÁRIO ACAB TENDO CONTATO, ELE PRESENCIA AQUILO DE MODO INESPERADO!
-TUDO QUE É VISÍVEL PARA O USUÁRIO, 
-
-- - - | | - - -
-
-VERIFICAÇÃO: ESTAMOS CONSTRUINDO O SISTEMA CORRETO? 
-
-VALIDAÇÃO: ESTAMOS CONSTRUINDO O SOFTWARE CORRETO?
-REGRAS DE NEGÓCIO, EXPECTATIVCAS DO USÚARIO ESTA SENDO ATENDIDA?
-
-
-===============================================
-AULA 02 => NÍVEIS E TÉCNICAS DE TESTES
-
-NÍVEIS DE TESTES: UNIDADE -> INTEGRAÇÃO -> SISTEMA -> REGRESSÃO -> ACEITAÇÃO
-
-1° TESTE - *UNIDADE* : SE PREOCUPA COM A PEQUENA PARTE DO CÓDIGO (JUNIT , PHPUNIT, JEST)
-
-2° TESTE - *INTEGRAÇÃO* : JUNTAR ESSA PEQUENA PARTE A UM OUTRO CONJUNTO (INTEGRATION)
-
-3° TESTE - *SISTEMA*: ABRIR O APLICACTIVO, SOFTARE PARA O USUÁRIO 
-
-4° TESTE - *REGRESSÃO*: MANTER O SISTEMA OK, ENQUANTO LANÇA ATUALIZAÇÕES (SELENNIUM).
-
---- ALPHA , BETA , CANNARY ---
-
-ALPHA É O PRIMEIRO TESTE, NORMALMENTE O MAIS SIMPLES PORQUE É O PRIMEIRO "SEMPRE HAVERÁ ALGUM ERRO PARA CORRIGIR"
-
-BETA É PRA UMA GAMA MAIOR DE USUARIOS, FAZER UMA VALIUDAÇÃO MAIOR EM GRUPO
-
-CANNARY ESTRATÉGIA DE DEPLOY, IMPLANTAR O SISTEMA EM PRODUÇÃO
-
-5° TESTE - *ACEITAÇÃO*: USUÁRIO FAZ OS TESTES E TIRA CONCLUÇÃO SE VAI QUERER FICAR COM O SISTEMA
-
-- - - | | - - -
-
-TÉCNICAS DE TESTES
-
-CAIXA BRANCA, ESTRUTURAL -> CONHECER O CÓDIGO FONTE, SABER COMO FUNCIONA EMBAIXO DOS PANOS (UNIDADE, INTEGRAÇÃO, REGRESSÃO)
-
-CAIXA PRETA, FUNCIONAL -> NÃO CONHECER O QUE ACONTECE, (INTEGRAÇÃO, SISTEMA, ACEITAÇÃO)
-
-CAIXA CINZA -> MESCLA DAS DUAS TÉCNICAS ACIMA, ENGENHARIA REVERSA
-
-========================================================================
-
-AULA 03 => TESTES NÃO FUNCIONAIS
-
-
-- COMPORTAMENTO DO SISTEMA
-- PERFORMANCE
-- ESCALABILIDADE
-- SEGURANCA
-- INFRAESTRUTURA
-
-
-*O QUE SÃO?* TEM COMO OBJETIVOS TESTAR ASPECTOS DO SOFTARE QUE NÃO SÃO ASSOCIADOS AS REGRAS DE NEGÓCIO MAS SIM A REQUISITOS NÃO FUNCIONAIS.
-
-*COMO?* FERRAMENTAS QUE USAM TÉCNICAS PARA APURAR O COMPORTAMENTO DO SISTEMA EM DETERMINADAS CIRCUNSTANCIAS.
-
-TESTE DE CARGA: TESTAR ACESSOS SIMULTANEOS NO SISTEMA, SOBRECARREGAR O SISTEMA 
-
-TESTE DE STRESS: TESTAR OS LIMITES DO SOFTARE, FORÇAR O SOFTWARE A QUEBRAR!
-
-TESTE DE SEGURANÇA: SEGURANÇA CIBRENETICA, DETECTAR VUNERABILIDADES NO SISTEMA
-
-==========================================================================
-
-AULA 04 => PIRAMIDE DE TESTES
-
-*O QUE É?*   
-
-                                          
+@Captor
+Quando você usa @Captor, você pode criar um objeto 
+capturador que pode ser usado para capturar os 
+argumentos passados para métodos mockados. Isso é 
+útil quando você precisa verificar os valores dos 
+argumentos passados ​​para métodos mockados dentro 
+do teste.
 
 
 
 
+Mockito referente ao MAven e ao Junit também é extraido do MVNRepository, adicionando a dependecia ao POM.xml
 
+Mockito Jupiter
+Mockito Core
 
+Sempre ao usar o mockito devo estar incluindo-o ao meu código com
 
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mockito;
 
-
-
-
-
-
-
-
+@ExtendWith(MockitoExtension.class)
+Sempre com a classe de teste
+====
 
 
  
