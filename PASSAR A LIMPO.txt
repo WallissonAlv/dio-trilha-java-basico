@@ -1,65 +1,37 @@
---- Em testes de software, "mocking" é uma técnica para
-simular o comportamento de objetos reais em um 
-ambiente controlado durante os testes. Em vez de 
-usar objetos reais, você cria objetos "falsos" que 
-imitam o comportamento dos objetos reais 
-necessários para o teste.
 
---- 
+===================================================
+			JUNIT
+===================================================
 
-@Mock
-Quando você anota um campo com @Mock, o Mockito cria
- um mock desse tipo automaticamente. Isso significa 
-que você não precisa chamar Mockito.mock() 
-explicitamente para criar o mock. Em resumo, 
-o @Mock simplifica o processo de criação de mocks, 
-tornando o código mais limpo e legível.
+NORMALMENTE NOMEAMOS A CLASSE DE (NOMEDACLASSETest)
 
-@Spy
-Quando você usa @Spy em um objeto, você está criando
-uma versão controlada dele, onde você pode definir 
-comportamentos específicos para alguns métodos, 
-enquanto outros métodos permanecem intactos, 
-executando suas implementações originais. Isso é 
-útil quando você precisa testar partes específicas 
-de um objeto real, mantendo a funcionalidade 
-original de outras partes.
+QUANDO A CLASSE NAO TEM @TEST ELA NÃO RODA PORQUE
+NÃO TEM O PSVM... PORTANTO PRECISAMOS IMPORTAR O 
+JUNIT
 
-@InjectMocks
-Quando você usa @InjectMocks, o Mockito tenta 
-injetar automaticamente mocks ou spies nos campos 
-anotados com @Mock ou @Spy dentro da classe sendo 
-testada. Isso significa que você não precisa 
-configurar manualmente as dependências da classe 
-sob teste; o Mockito faz isso por você.
+USAMOS O ASSERTIONS PARA COMPARAR O RESULTADO QUE
+ESPERAMOS, O QUE DEVEMOS FAZER PARA TESTAR A FUNÇÃO
 
-@Captor
-Quando você usa @Captor, você pode criar um objeto 
-capturador que pode ser usado para capturar os 
-argumentos passados para métodos mockados. Isso é 
-útil quando você precisa verificar os valores dos 
-argumentos passados ​​para métodos mockados dentro 
-do teste.
+CORRETO!!!
+
+
+===================================================
+			MOCKITO
+===================================================
+
+   O FRAMEWORK MOCK SIMULA O COMPORTAMENTO DE OUTRA
+CLASSE!
+
+BASICAMENTE QUANDO PRECISAMOS TESTAR ALGUMA FUNÇÃO
+QUE ESTÁ VINCULADA A ALGUM BANCO DE DADOS OU ALGUMA
+API, VAMOS USAR O MOCKITO E O JUNIT, O JUNIT VAI
+RODAR OS TESTE UNITÁRIOS ENQUANTO O MOCKITO VAI "FINGIR"
+SER O BANCO OU A API, ATÉ MESMO OUTRA CLASSE!!!
 
 
 
 
-Mockito referente ao MAven e ao Junit também é extraido do MVNRepository, adicionando a dependecia ao POM.xml
 
-Mockito Jupiter
-Mockito Core
-
-Sempre ao usar o mockito devo estar incluindo-o ao meu código com
-
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.Mockito;
-
-@ExtendWith(MockitoExtension.class)
-Sempre com a classe de teste
-====
-
-
- 
 
 
 
