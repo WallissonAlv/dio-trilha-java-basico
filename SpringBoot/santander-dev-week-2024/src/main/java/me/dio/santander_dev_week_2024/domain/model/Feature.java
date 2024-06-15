@@ -1,5 +1,5 @@
 package me.dio.santander_dev_week_2024.domain.model;
 
-public class Feature {
+public class Feature extends BaseItem {
 
 }
