@@ -1,20 +1,28 @@
 package me.dio.santander_dev_week_2024.domain.model;
 
-/* import jakarta.persistence.Entity;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;*/
+import jakarta.persistence.Id;
 
-// @Entity(name = "tb_account")
+@Entity(name = "tb_account")
 public class Account {
 
 	// ATRIBUTOS -----------------------------------
-	// @Id
-	// @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
+	@Column(unique = true)
 	private String number;
+	
 	private String agency;
+	
+	@Column(scale = 13, precision = 2)
 	private Number balance;
+	
+	@Column(name = "additional_limit",scale = 13, precision = 2)
 	private Number limit;
 	
 	// METODOS ACESSORES ---------------------------

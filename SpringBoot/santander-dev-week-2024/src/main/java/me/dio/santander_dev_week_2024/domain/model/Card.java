@@ -1,9 +1,23 @@
 package me.dio.santander_dev_week_2024.domain.model;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity(name = "tb_card")
 public class Card {
 	
 	// ATRIBUTOS -----------------------------------
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	
+	@Column(unique = true)
 	private String number;
+	
+	@Column(name = "available_limit",scale = 13, precision = 2)
 	private Number limit;
 	
 	// METODOS ACESSORES ---------------------------
@@ -18,5 +32,11 @@ public class Card {
 	}
 	public void setLimit(Number limit) {
 		this.limit = limit;
+	}
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
 	}
 }

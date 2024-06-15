@@ -1,8 +1,17 @@
 package me.dio.santander_dev_week_2024.domain.model;
 
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.MappedSuperclass;
+
+@MappedSuperclass
 public abstract class BaseItem {
 
 	// ATRIBUTOS -----------------------------------
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 	private String icon;
 	private String description;
 	
@@ -18,5 +27,11 @@ public abstract class BaseItem {
 	}
 	public void setDescription(String description) {
 		this.description = description;
+	}
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
 	}
 }
