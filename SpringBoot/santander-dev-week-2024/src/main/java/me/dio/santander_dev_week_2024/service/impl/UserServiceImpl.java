@@ -11,8 +11,10 @@ import me.dio.santander_dev_week_2024.service.UserService;
 @Service
 public class UserServiceImpl implements UserService {
 
+	// ATRIBUTOS ----------------------------------------------------------------------
 	private final UserRepository userRepository;
 	
+	// MÉTODOS PRINCIPAIS -------------------------------------------------------------
 	public UserServiceImpl(UserRepository userRepository) {
 		this.userRepository = userRepository;
 	}
