@@ -19,10 +19,11 @@ public class Account {
 	
 	private String agency;
 	
-	@Column(scale = 13, precision = 2)
+	// exemplo: 12.345.678.910,11
+	@Column(precision = 13, scale = 13)
 	private Number balance;
 	
-	@Column(name = "additional_limit",scale = 13, precision = 2)
+	@Column(name = "additional_limit",precision = 13, scale = 13)
 	private Number limit;
 	
 	// METODOS ACESSORES ---------------------------
