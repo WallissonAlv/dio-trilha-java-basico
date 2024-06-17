@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://viaduct.proxy.rlwy.net:54819/railway
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: WndTTDTtYILXfxcoBvtXCfdHvucRvkFT
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
